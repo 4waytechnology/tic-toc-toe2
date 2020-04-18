@@ -1,0 +1,87 @@
+.playerData
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  img
+    width: 18px;
+    margin-right: 12px;
+    filter: invert(1);
+  span
+    color: white;
+  .playerName
+    padding: 8px 12px;
+    font-size: 13px;
+    background-color: #444;
+    width: 200px;
+    border-radius: 4px;
+    margin-left: 12px
+    &[data-active="true"]
+      background-color: #46d6b633;
+      font-weight: bold;
+
+.winnerModal
+  max-width: 320px;
+  color: white;
+  .title
+    font-size: 20px;
+    font-weight: bold;
+  img
+    filter: invert(1);
+  img[alt="victory"]
+    margin-left: 16px;
+  button:first-child
+    margin-right: 16px;
+    flex: 1
+  a
+    flex: 1;
+    button
+      width: 100%;
+
+.gameBoard
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-row-gap: 16px;
+  grid-column-gap: 16px;
+  margin-top: 48px;
+  position: relative;
+  .tile
+    background-color: #333;
+    width: 100%;
+    height: 120px;
+    overflow: hidden;
+    padding: 24px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    cursor: pointer;
+    position: relative;
+    &:hover
+      img[data-marked="false"]
+        opacity: 0.3;
+    img
+      height: 100%;
+      filter: invert(1);
+      &[data-marked="true"]
+        opacity: 1;
+      &[data-marked="false"]
+        opacity: 0;
+    .winOverlay
+      background-color: #46d6b633;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 16px;
+      .strike
+        height: 10px;
+        background-color: #46d6b6;
+        position: relative;
+        top: 43%;
+        &[data-strike-style="row"]
+          transform: rotate(0deg);
+        &[data-strike-style="column"]
+          transform: rotate(90deg);
+        &[data-strike-style="diagonal-left"]
+          transform: rotate(45deg);
+        &[data-strike-style="diagonal-right"]
+          transform: rotate(-45deg);
+        

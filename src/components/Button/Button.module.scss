@@ -1,0 +1,22 @@
+.button {
+  padding: 20px 16px;
+  min-width: 100px;
+  font-size: 18px !important;
+  border-radius: 12px !important;
+  border: none;
+  font-weight: bold;
+  background: linear-gradient(#46d6b633, #46d6b655);
+  background-color: white;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px #46d6b6;
+  justify-content: center;
+}
+
+.button > img {
+  margin-left: 8px;
+}
+
+.button[data-size='small'] {
+  padding: 8px 16px;
+}
